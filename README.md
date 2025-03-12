@@ -71,8 +71,8 @@ By automating the process, you can save **90%** of the time that would have been
 ### ⏳ Time Saved Example
 
 - **Manual Time**: 900 minutes (15 hours)
-- **Automated Time**: 30 minutes
-- **Time Saved**: ~97% 🙌
+- **Automated Time**: 3 minutes
+- **Time Saved**: ~99.67% 🙌
 
 ---
 
@@ -80,8 +80,3 @@ By automating the process, you can save **90%** of the time that would have been
 
 If you'd like to contribute to this project, feel free to create a pull request. Any improvements or bug fixes are welcome!
 
----
-
-## 📝 License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). 
