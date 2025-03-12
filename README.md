@@ -47,14 +47,14 @@ Given that you have 30 Excel files, each with 2000 entries and 130 columns, runn
 ### **Time Saving Analysis**:
 
 - **Without Automation**:
-  - Manually processing each of the 30 files would take significant time. Assuming it would take **2 minutes** to process each file manually (including extracting, cleaning, and analyzing the data), the total time required would be:
-    - 30 files x 2 minutes = **60 minutes** (1 hour).
+  - Manually processing each of the 30 files would take significant time. Assuming it would take **30 minutes** to process each file manually (including extracting, cleaning, and analyzing the data), the total time required would be:
+    - 30 files x 30 minutes = **900 minutes** (15 hours).
 
 - **With the Scripts**:
   - The scripts process all 30 files in a total of **2-3 minutes**.
 
 ### **Time Saved (Linear)**:
-- **98% Time Saved** from manual processing, reducing the time spent from 1 hour to just a few minutes (approximately **59 minutes saved**).
+- **99.87% Time Saved** from manual processing, reducing the time spent from 1 hour to just a few minutes (approximately **59 minutes saved**).
 
 This shows the immense efficiency gained by automating these tasks with the provided scripts!
 
