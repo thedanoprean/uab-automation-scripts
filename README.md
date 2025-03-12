@@ -1,82 +1,92 @@
 
-# 📚 UAB Automation Scripts 🚀
+# 📚 Academic Data Processing Repository
 
-## ✨ Description
+This repository contains several Python scripts for processing and analyzing academic data. Below are the details of each script and instructions for usage.
 
-This repository contains a series of Python scripts designed to automate various administrative and data processing tasks related to academic data at **University 1 Decembrie 1918** in Alba Iulia. These scripts save time and effort by automating processes that would otherwise need to be done manually.
+## ⚙️ Usage Instructions
 
-## 🛠️ Included Scripts
+### 1. Extract Academic Data (`extract_academic_data.py`)
 
-1. **`extract_an_universitar.py`**  
-   Extracts the academic year from Excel file names and adds this information to a consolidated output file.
+This script processes all `.xlsx` files in a specified folder and consolidates them into a single Excel file.
 
-2. **`process_data.py`**  
-   Processes Excel files, extracts relevant data (e.g., study year, faculty, specialization), and generates a final file consolidating information from multiple sources.
+- **To Run**: 
+  - Ensure the folder path is set correctly in the script (`main_folder = r'C:\Users\UAB\Desktop\Situatii'`).
+  - It will create an output file named after the folder (e.g., `Situatii.xlsx`).
+  
+---
 
-3. **`generate_statistics.py`**  
-   Generates statistics related to students' provenance environment, grouped by faculties, specializations, study years, and academic years. Saves the statistics to an Excel file.
+### 2. Faculty Analysis Report (`faculty_analysis_report.py`)
 
-4. **`merge_excels.py`**  
-   Merges multiple Excel files containing student and school data, adds a "No." column, and cleans the data to make it more uniform.
+This script reads data from multiple final files and generates statistical reports grouped by faculty, specialization, and academic year.
 
-5. **`group_similar_schools.py`**  
-   Groups similar schools based on fuzzy name matching and saves the results in an Excel file, including total counts per county.
+- **To Run**: 
+  - Make sure the `main_folder` is correctly set in the script.
+  - It generates statistics based on the columns: `FACULTATE`, `SPECIALIZARE`, `AN DE STUDII`, and `AN UNIVERSITAR`.
+  - The final report is saved to `Statistica_Finala.xlsx`.
 
 ---
 
-## 🚀 Installation
+### 3. Aggregate Excel Sheets (`aggregate_excel_sheets.py`)
 
-To run the scripts above, you need to have the following Python libraries installed:
+This script aggregates data from multiple Excel files into one, ensuring the necessary columns are available and that the data is clean.
 
-```bash
-pip install pandas openpyxl fuzzywuzzy
-```
-
----
-
-## 📝 Usage Instructions
-
-### 1. 📂 Add Input Files  
-Ensure your Excel files are placed in the appropriate folders under the `Situatii` directory. Each script has specific instructions for reading input files from a particular folder.
-
-### 2. ▶️ Running a Script  
-After adding the input files, you can run the desired script. For example, to process the files and generate a final file, run:
-
-```bash
-python process_data.py
-```
-
-### 3. 📊 Generating Statistics  
-Once the files are processed, you can generate statistics using:
-
-```bash
-python generate_statistics.py
-```
-
-The statistics will be saved in the `Situatii` directory.
+- **To Run**: 
+  - Provide a list of input files (`input_files`) and specify the output file name (`output_file`).
+  - The final output will be saved as `final_result.xlsx`.
 
 ---
 
-## ⏱️ Time Saved
+### 4. School Data Normalizer (`school_data_normalizer.py`)
 
-### 💡 Manual Processing Time Estimate
+This script normalizes and groups school data from Excel files, checking for similar schools and ensuring the proper grouping.
 
-Given that there are 30 Excel files, each with 2000 entries and 130 columns of data, manual processing of these files would be extremely time-consuming. Each file would require at least 30 minutes to extract relevant data, analyze it, and save the final file.
-
-- **Estimated manual time**: 30 files x 30 minutes = 900 minutes (~15 hours)
-- **Time saved with automation**: The automation process can be done much faster (approximately 1-2 minutes per file, depending on system performance).
-
-By automating the process, you can save **90%** of the time that would have been spent on manual processing.
-
-### ⏳ Time Saved Example
-
-- **Manual Time**: 900 minutes (15 hours)
-- **Automated Time**: 3 minutes
-- **Time Saved**: ~99.67% 🙌
+- **To Run**: 
+  - Input the folder and filename when prompted.
+  - The result will be saved as a new Excel file with grouped school data.
+  - It uses fuzzy matching to group similar schools within the same county.
 
 ---
 
-## 🤝 Contributing
+## 🛠️ Installation
 
-If you'd like to contribute to this project, feel free to create a pull request. Any improvements or bug fixes are welcome!
+1. **Clone the Repository**:
+   - You can clone the repository to your local machine using Git:
+   ```bash
+   git clone https://github.com/yourusername/yourrepository.git
+   ```
+
+2. **Install Dependencies**:
+   - Make sure you have Python 3.8+ installed.
+   - Install the required dependencies using `pip`:
+   ```bash
+   pip install -r requirements.txt
+   ```
+   - Required dependencies include:
+     - `pandas`
+     - `openpyxl`
+     - `fuzzywuzzy`
+     - `python-Levenshtein`
+
+---
+
+## 📋 Usage Instructions
+
+1. **Run the Scripts**:
+   - Navigate to the script folder on your local machine and execute the desired script. For example:
+   ```bash
+   python extract_academic_data.py
+   ```
+
+2. **Customize**:
+   - Update the folder paths, filenames, or any other variables in the scripts to match your use case.
+   - You can modify the list of input files or customize the output filenames as needed.
+
+---
+
+## 📂 Folder Structure
+
+- `extract_academic_data.py`: Script to process academic data and consolidate it into a single Excel file.
+- `faculty_analysis_report.py`: Script to generate faculty analysis reports based on academic data.
+- `aggregate_excel_sheets.py`: Script to aggregate data from multiple Excel files.
+- `school_data_normalizer.py`: Script to normalize and group school data using fuzzy matching.
 
