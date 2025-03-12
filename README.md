@@ -54,7 +54,7 @@ Given that you have 30 Excel files, each with 2000 entries and 130 columns, runn
   - The scripts process all 30 files in a total of **2-3 minutes**.
 
 ### **Time Saved (Linear)**:
-- **99.87% Time Saved** from manual processing, reducing the time spent from 1 hour to just a few minutes (approximately **59 minutes saved**).
+- **99.87% Time Saved** from manual processing, reducing the time spent from 15 hours to just a few minutes (approximately **898 minutes saved**).
 
 This shows the immense efficiency gained by automating these tasks with the provided scripts!
 
